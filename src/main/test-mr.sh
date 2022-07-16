@@ -35,7 +35,8 @@ else
 fi
 if [ "$TIMEOUT" != "" ]
 then
-  TIMEOUT+=" -k 2s 180s "
+  # TIMEOUT+=" -k 2s 180s "
+  TIMEOUT+=" -k 2s 720s "
 fi
 
 # run the test in a fresh sub-directory.
@@ -130,7 +131,7 @@ fi
 
 wait
 
-#########################################################
+########################################################
 echo '***' Starting map parallelism test.
 
 rm -f mr-*
